@@ -47,10 +47,10 @@ public partial class View_PerfilUsuario : System.Web.UI.Page
         tb_Napellido.Text = usuario.Apellido;
         tb_Nusername.Text = usuario.Username;
         tb_Npass.Text = usuario.Password;
-        
+
         btn_Guardar.Visible = true;
         btn_Modificar.Visible = false;
-        
+
     }
 
     protected void btn_Guardar_Click(object sender, EventArgs e)
@@ -65,7 +65,7 @@ public partial class View_PerfilUsuario : System.Web.UI.Page
 
         DaoUsuario dao = new DaoUsuario();
         dao.actualizarDatos(usuario);
-        
+
         Response.Redirect("PerfilUsuario.aspx");
     }
 
@@ -80,21 +80,29 @@ public partial class View_PerfilUsuario : System.Web.UI.Page
         btn_Eliminar.Visible = false;
         tb_Dusername.Visible = true;
         btn_Confirmar.Visible = true;
-        
+
 
     }
 
     protected void btn_Confirmar_Click(object sender, EventArgs e)
     {
-        EDatos user = new EDatos();
-        user.Username = tb_Dusername.Text;
+
+        string nombre = tb_Dusername.Text;
 
         DaoUsuario dao = new DaoUsuario();
-        dao.eliminarUsuario(user);
-        
-        Response.Redirect("Inicio.aspx");
+        bool response = dao.eliminarUsuario(nombre);
 
-        
+        if (response == true)
+        {
+            Response.Redirect("Inicio.aspx");
+        }
+        else
+        {
+            ClientScriptManager cm = this.ClientScript;
+            cm.RegisterClientScriptBlock(this.GetType(), "", "<script type='text/javascript'>alert ('El usuario no existe' );</script>");
+            return;
+        }
+
     }
 
     protected void onClickCerrarSesion(object sender, EventArgs e)

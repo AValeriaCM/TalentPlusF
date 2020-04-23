@@ -72,18 +72,32 @@ public class DaoUsuario
         }
     }
 
-    public void eliminarUsuario(EDatos usuario)
+    public Boolean eliminarUsuario(string usuario)
     {
         using (var db = new Mapeo())
         {
-            var user = db.usuario.FirstOrDefault(s => s.Username == usuario.Username);
+            var user = db.usuario.FirstOrDefault(s => s.Username == usuario);
             if (user != null)
             {
+                var videos = (from v in db.video where v.Id_usuario == user.Id select v).ToList();
+
+                foreach(var video in videos)
+                {
+                    db.video.Remove(video);
+                    db.SaveChanges();
+                }
+
                 db.usuario.Remove(user);
                 db.SaveChanges();
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
     }
+
 
     public void insertarVideo(EVideo video)
     {
