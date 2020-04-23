@@ -1,0 +1,86 @@
+﻿html {
+    font-size: 62.5%; /*Reset para REMS*/
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+/* Globales */
+
+img {
+    max-width: 100%;
+}
+
+.contenedor {
+    max-width: 120rem; /*limita y usa espacio disponible*/
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 3.4rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h4 {
+    font-size: 2.6rem;
+}
+
+/* Header*/
+.site-header.inicio {
+    background-image: url(../img/back-talent.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    min-height: 50rem;
+}
+
+.contenido-header {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contenido-header h1 {
+    color: white;
+    padding-bottom: 2rem;
+    max-width: 60rem;
+    line-height: 2;
+}
+
+.barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 3rem;
+}
+/* Navegación */
+.navegacion a {
+    color: white;
+    text-decoration: underline;
+    font-size: 1.8rem; /* = 18px*/
+    margin-right: 4rem;
+}
+
+.navegacion a:last-of-type {
+    margin-right: 0;
+}
+
+/*Utilidades*/
+.fw-300 {
+    font-weight: 300;
+}
+
+.centrar-texto {
+    text-align: center;
+}

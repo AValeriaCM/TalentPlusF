@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1082
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "TalenPlus", "TalenPlus\", "{9E875C51-E836-4AC8-8A46-55580C2116B5}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_57559"
+		Debug.AspNetCompiler.PhysicalPath = "TalenPlus\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_57559\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_57559"
+		Release.AspNetCompiler.PhysicalPath = "TalenPlus\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_57559\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "57559"
+		SlnRelativePath = "TalenPlus\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9E875C51-E836-4AC8-8A46-55580C2116B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E875C51-E836-4AC8-8A46-55580C2116B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {26DFEFF6-0F1E-45C0-994D-1E7726C500D5}
+	EndGlobalSection
+EndGlobal

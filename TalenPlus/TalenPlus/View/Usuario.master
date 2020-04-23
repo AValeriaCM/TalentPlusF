@@ -1,0 +1,32 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="~/Controller/Usuario.master.cs" Inherits="View_Usuario" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Mi Perfil</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" />
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <link rel="stylesheet" href="../css/registerstyle.css" />
+</head>
+    
+
+<body>
+    <form id="formularioUsuario" method="post" runat="server">
+        <div class="sidebar">
+            <h2>MENU</h2>
+            <ul>
+                <li><a href="InicioUsuario.aspx">Inicio</a></li>
+                <li><a href="PerfilUsuario.aspx">Perfil</a></li>
+                <li><a><asp:Button ID="btn_CerrarSesion" CssClass="boton" runat="server" Text="Cerrar Sesion" BackColor="Black" BorderColor="Black" ForeColor="White" OnClick="btn_CerrarSesion_Click" /></a></li>
+            </ul>
+        </div>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+
+    </form>
+</body>
+</html>
